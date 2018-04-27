@@ -16,21 +16,6 @@ url = 'https://www.flipkart.com/offers/deals-of-the-day?pk=dotd'
 driver = webdriver.Firefox()
 driver.get(url)           
 
-
-#last_height = driver.execute_script("return document.body.scrollHeight")
-
-#for i in range(0,1000):
-	#for j in range(0,1000):
-	#	continue
-
-#driver.execute_script("window.scrollTo(0, 1320);")
-#pauseva()
-
-#scheight = .1
-#while scheight < 9.9:
- #   driver.execute_script("window.scrollTo(0, document.body.scrollHeight/%s);" % scheight)
-  #  scheight += .01
-
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight/5)")
 pauseva()
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight/4)")
@@ -44,9 +29,5 @@ html = driver.page_source
 soup = bs.BeautifulSoup(html,"html.parser")
 
 div = soup.find_all('div', attrs={'class' : 'iUmrbN'})
-print div
-
-#time.sleep(SCROLL_PAUSE_TIME)
-
-#<div class="iUmrbN">Sparx, Krassa &amp; more</div>
+print div[0]
 
