@@ -31,14 +31,26 @@ for i in range(0,len(div)):
 
 	name.append(item.div.div.img["alt"])
 
+print len(name)
+#GETTING THE DISCOUNT PERCENTAGE
 
-#discount = bs.BeautifulSoup(str(div[0]),"html.parser")
-div2 = soup.find('div', attrs = {'class' : 'a-row priceBlock unitLineHeight'})
+div2 = soup.find_all('div', attrs = {'class' : 'a-row dealDetailContainer'})
+discount = []
+for i in range(0,len(div2)):
+	item = div2[i].findAll('span', attrs={'class':'a-size-base a-color-base inlineBlock unitLineHeight'},text= True)
 
-soup2 = bs.BeautifulSoup(div2[0],"html.parser")
-span = soup2.find('span', attrs={'class' : 'a-size-base a-color-base inlineBlock unitLineHeight'})
+	discount.append(item[1])
 
-print span
+discount2 = []
+for i in range(0,len(discount)):
+	stringva = str(discount[i])
+	start = stringva.find('(')
+	end = stringva.find(')')
+	price = stringva[start + 1:end]
+	discount2.append(price)
+
+for i in range(0,len(discount2)):
+	print name[i] + " , " + discount2[i]
 
 
-
+ 
