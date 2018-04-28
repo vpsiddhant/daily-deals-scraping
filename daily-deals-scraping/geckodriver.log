@@ -810,3 +810,10 @@ IPDL protocol error: Handler returned error code!
 1524903316360	Marionette	INFO	Enabled via --marionette
 1524903317324	Marionette	INFO	Listening on port 40707
 1524903317376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524903806904	geckodriver	INFO	geckodriver 0.20.1
+1524903806908	geckodriver	INFO	Listening on 127.0.0.1:37473
+1524903807909	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-profile" "/tmp/rust_mozprofile.WWGbYzvaHdhC"
+*** You are running in headless mode.
+1524903808436	Marionette	INFO	Enabled via --marionette
+1524903809446	Marionette	INFO	Listening on port 35069
+1524903809520	Marionette	WARN	TLS certificate errors will be ignored for this session

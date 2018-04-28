@@ -2,6 +2,7 @@ import bs4 as bs
 import re
 from selenium import webdriver
 import time
+from selenium.webdriver.firefox.options import Options
 
 def pauseva():
 	for i in range(1,16):
@@ -13,8 +14,13 @@ SCROLL_PAUSE_TIME = 5
 
 url = 'https://www.flipkart.com/offers/deals-of-the-day?pk=dotd'
 
-driver = webdriver.Firefox()
-driver.get(url)           
+
+options = Options()
+options.set_headless(headless=True)
+
+driver = webdriver.Firefox(firefox_options=options)
+driver.get(url)
+
 
 #driver.execute_script("window.scrollTo(0, document.body.scrollHeight/5)")
 #pauseva()
@@ -53,7 +59,7 @@ for i in range(0,len(div)):
 
 	#print name[i] + "," + discount[i]
 	
-	f.write(name[i].encode('utf-8').strip().replace(","," ") + "," + discount[i].encode('utf-8').strip()replace(","," ") + "\n")
+	f.write(name[i].encode('utf-8').strip().replace(","," ") + "," + discount[i].encode('utf-8').strip().replace(","," ") + "\n")
 
 f.close()
 driver.close()

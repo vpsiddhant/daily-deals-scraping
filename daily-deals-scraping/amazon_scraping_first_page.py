@@ -63,3 +63,5 @@ for i in range(0,len(discount2)):
 
 
 
+f.close()
+driver.close()
