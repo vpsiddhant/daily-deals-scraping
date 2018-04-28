@@ -49,52 +49,17 @@ for i in range(0,len(discount)):
 	price = stringva[start + 1:end]
 	discount2.append(price)
 
+filename = "amazon.csv"
+
+f = open(filename,"w")
+
+headers = "Product , Deals \n"
+
+f.write(headers)
 for i in range(0,len(discount2)):
-	print name[i] + " , " + discount2[i]
+	#print name[i] + " , " + discount2[i]
+	f.write(name[i].encode('utf-8').strip().replace(","," ") + "," + discount2[i].encode('utf-8').strip().replace(","," ") + "\n")
 
 
-# SCRAPING FOR ALL PAGES FROM 2 TO 313
 
-for i in range(2,313):
-	url = url_part_1 + str(i) + url_part_3 
-	options = Options()
-	options.set_headless(headless=True)
-
-	driver = webdriver.Firefox(firefox_options=options)
-	driver.get(url)
-	#GETTING SOURCE CODE OF THE WEBPAGE
-	html = driver.page_source
-	soup = bs.BeautifulSoup(html,"html.parser")
-
-	#GETTING THE NAME OF THE ITEM
-	div = soup.find_all('div', attrs={'class' : 'a-row dealContainer dealTile'})
-
-	nameva = []
-	for i in range(0,len(div)):
-		item = div[i]
-
-		nameva.append(item.div.div.img["alt"])
-
-	print len(name)
-	#GETTING THE DISCOUNT PERCENTAGE
-
-	div2 = soup.find_all('div', attrs = {'class' : 'a-row dealDetailContainer'})
-	discountva = []
-	for i in range(0,len(div2)):
-		item = div2[i].findAll('span', attrs={'class':'a-size-base a-color-base inlineBlock unitLineHeight'},text= True)
-
-		discountva.append(item[1])
-
-	discount2va = []
-	for i in range(0,len(discount)):
-		stringva = str(discount[i])
-		start = stringva.find('(')
-		end = stringva.find(')')
-		price = stringva[start + 1:end]
-		discount2va.append(price)
-
-	name = name + nameva
-	discount2 = discount2 + discount2va 
-for i in range(0,len(discount2)):
-	print name[i] + " , " + discount2[i]
 

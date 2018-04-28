@@ -803,3 +803,10 @@ IPDL protocol error: Handler returned error code!
 1524901626800	Marionette	INFO	Listening on port 36761
 1524901626854	Marionette	WARN	TLS certificate errors will be ignored for this session
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1524903314857	geckodriver	INFO	geckodriver 0.20.1
+1524903314861	geckodriver	INFO	Listening on 127.0.0.1:51879
+1524903315868	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-headless" "-profile" "/tmp/rust_mozprofile.K3bDkQxItajk"
+*** You are running in headless mode.
+1524903316360	Marionette	INFO	Enabled via --marionette
+1524903317324	Marionette	INFO	Listening on port 40707
+1524903317376	Marionette	WARN	TLS certificate errors will be ignored for this session
