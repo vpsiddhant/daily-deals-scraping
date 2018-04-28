@@ -778,3 +778,28 @@ IPDL protocol error: Handler returned error code!
 1524885577182	Marionette	INFO	Listening on port 42583
 1524885577242	Marionette	WARN	TLS certificate errors will be ignored for this session
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1524900942751	geckodriver	INFO	geckodriver 0.20.1
+1524900942754	geckodriver	INFO	Listening on 127.0.0.1:51167
+1524900943755	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Zi9HJllAl6ku"
+1524900944304	Marionette	INFO	Enabled via --marionette
+1524900945404	Marionette	INFO	Listening on port 39689
+1524900945462	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524901048390	geckodriver	INFO	geckodriver 0.20.1
+1524901048394	geckodriver	INFO	Listening on 127.0.0.1:37161
+1524901049398	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.7MfdJPx7skMu"
+1524901049922	Marionette	INFO	Enabled via --marionette
+1524901050992	Marionette	INFO	Listening on port 40479
+1524901051026	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524901375748	geckodriver	INFO	geckodriver 0.20.1
+1524901375752	geckodriver	INFO	Listening on 127.0.0.1:36265
+1524901376756	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.CsblTuE0MeGh"
+1524901377278	Marionette	INFO	Enabled via --marionette
+1524901378302	Marionette	INFO	Listening on port 42901
+1524901378364	Marionette	WARN	TLS certificate errors will be ignored for this session
+1524901624231	geckodriver	INFO	geckodriver 0.20.1
+1524901624236	geckodriver	INFO	Listening on 127.0.0.1:38657
+1524901625237	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Tjx9q5RxNodI"
+1524901625764	Marionette	INFO	Enabled via --marionette
+1524901626800	Marionette	INFO	Listening on port 36761
+1524901626854	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping

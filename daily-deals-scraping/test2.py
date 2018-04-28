@@ -40,22 +40,13 @@ div2 = soup.find_all('div', attrs={'class' : 'BXlZdc'})
 
 name = []
 discount = []
-
-filename = "flipkart.csv"
-f = open(filename,'w')
-
-headers = "Product, Deal\n"
-f.write(headers)
-
 for i in range(0,len(div)):
 	name.append(div[i].text)
 	discount.append(div2[i].text)
 
-	#print name[i] + "," + discount[i]
+	print name[i] + "," + discount[i]
 	
-	f.write(name[i].encode('utf-8').strip().replace(","," ") + "," + discount[i].encode('utf-8').strip()replace(","," ") + "\n")
 
-f.close()
+
+
 driver.close()
-
-
